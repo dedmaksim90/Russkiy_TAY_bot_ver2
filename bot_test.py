@@ -3833,16 +3833,18 @@ async def on_startup(dp):
     print(f"[OK] Загружено заказов: {len(orders_db)}")
     print(f"[OK] Администраторов: {len(admins_db)}")
     
-    # Проверка: если товаров 0, пробуем загрузить еще раз
-    if len(products_db) == 0:
-        print("\n⚠️ Товаров не найдено! Пробуем загрузить еще раз...")
-        from database import get_all_products
-        products = get_all_products()
-        print(f"Прямой запрос в БД: товаров {len(products)}")
-        if products:
-            for p in products:
-                products_db[p['id']] = dict(p)
-            print(f"[OK] Загружено товаров напрямую: {len(products_db)}")
+    # Если база пустая, но есть shop_data.json - запустить миграцию
+    if len(products_db) == 0 and os.path.exists('shop_data.json'):
+        print("\n⚠️ База пустая, но найден shop_data.json! Запускаю миграцию...")
+        try:
+            from migrate_from_old_bot import main as migrate_main
+            migrate_main()
+            # Перезагружаем данные после миграции
+            load_data()
+            print(f"[OK] После миграции загружено товаров: {len(products_db)}")
+            print(f"[OK] После миграции загружено заказов: {len(orders_db)}")
+        except Exception as e:
+            print(f"⚠️ Ошибка миграции: {e}")
     # =====================================
 
     # ===== ПРИНУДИТЕЛЬНЫЙ СБРОС ВЕБХУКА =====
