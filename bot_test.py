@@ -1336,22 +1336,18 @@ async def show_products(message: types.Message):
         # Извлекаем имя рубрики (убираем счетчик в скобках)
         rubric_text = message.text.split(' (')[0]
         
-        product = None
+        # Ищем ВСЕ товары, где название рубрики содержится в названии
+        found_products = []
         for prod in products_db.values():
-            if prod.get('subcategory') == rubric_text:
-                product = prod
-                break
-        
-        # Если не нашли точное совпадение, ищем по частичному
-        if not product:
-            for prod in products_db.values():
-                prod_sub = prod.get('subcategory', '')
-                # Проверяем, содержится ли название кнопки в названии товара
-                if rubric_text in prod_sub or rubric_text.replace('🐔', '').replace('🐦', '').replace('👑', '').strip() in prod_sub:
-                    product = prod
-                    break
-        
-        if not product:
+            prod_sub = prod.get('subcategory', '')
+            # Проверяем совпадение по ключевым словам (с эмодзи и без)
+            if (rubric_text in prod_sub or 
+                prod_sub in rubric_text or
+                rubric_text.replace('🐔', '').replace('🐦', '').replace('👑', '').replace('🥚', '').strip() in prod_sub):
+                if prod.get('quantity', 0) > 0:
+                    found_products.append(prod)
+
+        if not found_products:
             user_is_admin = is_admin(message.from_user.id)
             if user_is_admin:
                 await message.answer(
@@ -1362,26 +1358,30 @@ async def show_products(message: types.Message):
             else:
                 await message.answer(f"📭 В рубрике '{rubric_text}' пока нет товаров.")
             return
+
+        # Показываем ВСЕ найденные товары
+        for product in found_products:
+            caption = format_product_info(product)
+            if user_is_admin:
+                caption = f"👑 РЕЖИМ АДМИНИСТРАТОРА\n\n{caption}"
+            
+            if product.get('photo'):
+                await message.answer_photo(
+                    product['photo'],
+                    caption=caption,
+                    parse_mode="HTML",
+                    reply_markup=get_product_keyboard(product['id'], product, is_admin=user_is_admin)
+                )
+            else:
+                await message.answer(
+                    caption,
+                    parse_mode="HTML",
+                    reply_markup=get_product_keyboard(product['id'], product, is_admin=user_is_admin)
+                )
         
-        caption = format_product_info(product)
-        user_is_admin = is_admin(message.from_user.id)
-        if user_is_admin:
-            caption = f"👑 РЕЖИМ АДМИНИСТРАТОРА\n\n{caption}"
-        if product.get('photo'):
-            await message.answer_photo(
-                product['photo'],
-                caption=caption,
-                parse_mode="HTML",
-                reply_markup=get_product_keyboard(product['id'], product, is_admin=user_is_admin)
-            )
-        else:
-            await message.answer(
-                caption,
-                parse_mode="HTML",
-                reply_markup=get_product_keyboard(product['id'], product, is_admin=user_is_admin)
-            )
         if not user_is_admin:
-            increment_product_view(product['id'])
+            for product in found_products:
+                increment_product_view(product['id'])
     except Exception as e:
         await message.answer(f"❌ Ошибка: {str(e)}")
 
