@@ -1,0 +1,1551 @@
+{
+  "products": {
+    "a38ae031": {
+      "id": "a38ae031",
+      "category": "🥚 Яйцо",
+      "subcategory": "🐔 Куриное",
+      "price": 15,
+      "quantity": 0,
+      "photo": "AgACAgIAAxkBAAIL_GmRm54OaLGAQFoojDV-V2zqE6JVAAL8E2sb5EaJSA0YysoqgS8ZAQADAgADeQADOgQ",
+      "published": false,
+      "created_at": "15.02.2026 10:10"
+    },
+    "5f29cdc2": {
+      "id": "5f29cdc2",
+      "category": "🥚 Яйцо",
+      "subcategory": "🐦 Перепелиное",
+      "price": 8,
+      "quantity": 0,
+      "photo": "AgACAgIAAxkBAAIMHmmRnJy7rK0jhNjd5_bznV3oY1ksAALLFGsb5EaJSJ4DB73L53hJAQADAgADeQADOgQ",
+      "published": false,
+      "created_at": "15.02.2026 10:14"
+    },
+    "acfa237d": {
+      "id": "acfa237d",
+      "category": "🥚 Яйцо",
+      "subcategory": "👑 Цесариное",
+      "price": 20,
+      "quantity": 0,
+      "photo": "AgACAgIAAxkBAAIMM2mRnNTjPiEIo8dHDDOFIaezULRiAALRFGsb5EaJSK-1uOww6L1QAQADAgADeQADOgQ",
+      "published": false,
+      "created_at": "15.02.2026 10:15"
+    },
+    "3106f9cf": {
+      "id": "3106f9cf",
+      "category": "🍗 Мясо",
+      "subcategory": "🐓 Цыпленок бройлер",
+      "price": 450,
+      "quantity": 12,
+      "photo": "AgACAgIAAxkBAAIMTGmRnPkgdwAB5cVULaDW6vbDAaROnAAC0xRrG-RGiUgPlTAgQUsFzQEAAwIAA3kAAzoE",
+      "published": false,
+      "created_at": "15.02.2026 10:16"
+    },
+    "b0b75c26": {
+      "id": "b0b75c26",
+      "category": "🍗 Мясо",
+      "subcategory": "🐔 Молодой петушок",
+      "price": 550,
+      "quantity": 1,
+      "photo": "AgACAgIAAxkBAAIMTGmRnPkgdwAB5cVULaDW6vbDAaROnAAC0xRrG-RGiUgPlTAgQUsFzQEAAwIAA3kAAzoE",
+      "published": false,
+      "created_at": "15.02.2026 10:17"
+    },
+    "9dd1def7": {
+      "id": "9dd1def7",
+      "category": "🍗 Мясо",
+      "subcategory": "👑 Цесарка",
+      "price": 800,
+      "quantity": 2,
+      "photo": "AgACAgIAAxkBAAIMTGmRnPkgdwAB5cVULaDW6vbDAaROnAAC0xRrG-RGiUgPlTAgQUsFzQEAAwIAA3kAAzoE",
+      "published": false,
+      "created_at": "15.02.2026 10:17"
+    },
+    "45381ff4": {
+      "id": "45381ff4",
+      "category": "🍗 Мясо",
+      "subcategory": "🐦 Перепелка",
+      "price": 750,
+      "quantity": 0,
+      "photo": "AgACAgIAAxkBAAIMTGmRnPkgdwAB5cVULaDW6vbDAaROnAAC0xRrG-RGiUgPlTAgQUsFzQEAAwIAA3kAAzoE",
+      "published": false,
+      "created_at": "15.02.2026 10:18"
+    },
+    "8fc0f0c8": {
+      "id": "8fc0f0c8",
+      "category": "🥫 Полуфабрикаты",
+      "subcategory": "🌭 Колбаса",
+      "price": 1100,
+      "quantity": 0,
+      "photo": "AgACAgIAAxkBAAISq2mYcHi23mAUM0Op_mzS7gb7C8-ZAAI9FGsbIVLJSFZh17Ms0KTyAQADAgADeQADOgQ",
+      "published": false,
+      "created_at": "20.02.2026 14:32"
+    }
+  },
+  "orders": {
+    "a6f89c09": {
+      "id": "a6f89c09",
+      "user_id": "1884160873",
+      "username": "boligariv",
+      "items": [
+        {
+          "id": "a38ae031",
+          "name": "🐔 Куриное",
+          "quantity": 1,
+          "price": 15,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 150,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 10:11",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 10:12",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "15.02.2026 10:12",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 10:11",
+      "has_exact_price": true,
+      "status_updated_at": "15.02.2026 10:12"
+    },
+    "c70efbe8": {
+      "id": "c70efbe8",
+      "user_id": "1884160873",
+      "username": "boligariv",
+      "items": [
+        {
+          "id": "9dd1def7",
+          "name": "👑 Цесарка",
+          "quantity": 1,
+          "price": 800,
+          "price_per_kg": true,
+          "average_weight": 1.4,
+          "exact_price": false
+        }
+      ],
+      "total": 1120.0,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 10:19",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 10:20",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "15.02.2026 10:20",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 10:19",
+      "has_exact_price": false,
+      "status_updated_at": "15.02.2026 10:20"
+    },
+    "1588d6f2": {
+      "id": "1588d6f2",
+      "user_id": "963493744",
+      "username": "irina_akif",
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "acfa237d",
+          "name": "👑 Цесариное",
+          "quantity": 2,
+          "price": 20,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 1845.0,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 12:38",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 12:39",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "15.02.2026 17:39",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 12:38",
+      "has_exact_price": false,
+      "status_updated_at": "15.02.2026 17:39"
+    },
+    "2f10ce97": {
+      "id": "2f10ce97",
+      "user_id": "1499578924",
+      "username": null,
+      "items": [
+        {
+          "id": "45381ff4",
+          "name": "🐦 Перепелка",
+          "quantity": 6,
+          "price": 750,
+          "price_per_kg": true,
+          "average_weight": 0.2,
+          "exact_price": false
+        },
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 2,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 3150.0,
+      "delivery_method": "delivery",
+      "address": "Крутая Малахитовая 140",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 12:47",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 12:48",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "15.02.2026 18:58",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 12:47",
+      "has_exact_price": false,
+      "status_updated_at": "15.02.2026 18:58"
+    },
+    "be93b796": {
+      "id": "be93b796",
+      "user_id": "1009265622",
+      "username": "Mariy081320",
+      "items": [
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 1425.0,
+      "delivery_method": "delivery",
+      "address": "🛒 Корзина",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 13:04",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 17:19",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "15.02.2026 17:40",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 13:04",
+      "has_exact_price": false,
+      "status_updated_at": "15.02.2026 17:40"
+    },
+    "b6972ff4": {
+      "id": "b6972ff4",
+      "user_id": "1009265622",
+      "username": "Mariy081320",
+      "items": [
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 1425.0,
+      "delivery_method": "delivery",
+      "address": "Нижний Новгород Ул 40 лет Октября 15 к 3",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 16:25",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 16:34",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "15.02.2026 17:40",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 16:25",
+      "has_exact_price": false,
+      "status_updated_at": "15.02.2026 17:40"
+    },
+    "0ca942e7": {
+      "id": "0ca942e7",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        },
+        {
+          "id": "b0b75c26",
+          "name": "🐔 Молодой петушок",
+          "quantity": 3,
+          "price": 550,
+          "price_per_kg": true,
+          "average_weight": 1,
+          "exact_price": false
+        }
+      ],
+      "total": 2775.0,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30 Сормово",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 17:22",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 17:40",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "16.02.2026 16:34",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 17:22",
+      "has_exact_price": false,
+      "status_updated_at": "16.02.2026 16:34"
+    },
+    "237e1ae7": {
+      "id": "237e1ae7",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 620,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30 Сормово",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "15.02.2026 17:28",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "15.02.2026 17:41",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "16.02.2026 16:34",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "15.02.2026 17:28",
+      "has_exact_price": true,
+      "status_updated_at": "16.02.2026 16:34"
+    },
+    "67f2afe4": {
+      "id": "67f2afe4",
+      "user_id": "5742620655",
+      "username": null,
+      "items": [
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 1425.0,
+      "delivery_method": "delivery",
+      "address": "Ул. Космическая, 52-109",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "16.02.2026 07:30",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "16.02.2026 08:43",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "16.02.2026 16:35",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "16.02.2026 07:30",
+      "has_exact_price": false,
+      "status_updated_at": "16.02.2026 16:35"
+    },
+    "bc44770b": {
+      "id": "bc44770b",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "9dd1def7",
+          "name": "👑 Цесарка",
+          "quantity": 1,
+          "price": 800,
+          "price_per_kg": true,
+          "average_weight": 1.4,
+          "exact_price": false
+        },
+        {
+          "id": "45381ff4",
+          "name": "🐦 Перепелка",
+          "quantity": 7,
+          "price": 750,
+          "price_per_kg": true,
+          "average_weight": 0.2,
+          "exact_price": false
+        }
+      ],
+      "total": 2170.0,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30 Сормово",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "16.02.2026 18:51",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "16.02.2026 20:26",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "20.02.2026 08:22",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "16.02.2026 18:51",
+      "has_exact_price": false,
+      "status_updated_at": "20.02.2026 08:22"
+    },
+    "ce5b653b": {
+      "id": "ce5b653b",
+      "user_id": "1790910476",
+      "username": null,
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 4,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 640,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "❌ Отменен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "20.02.2026 07:06",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "20.02.2026 07:33",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "❌ Отменен",
+          "timestamp": "26.02.2026 19:18",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "20.02.2026 07:06",
+      "has_exact_price": true,
+      "status_updated_at": "26.02.2026 19:18"
+    },
+    "dfd92ac9": {
+      "id": "dfd92ac9",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "acfa237d",
+          "name": "👑 Цесариное",
+          "quantity": 1,
+          "price": 20,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "a38ae031",
+          "name": "🐔 Куриное",
+          "quantity": 2,
+          "price": 15,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 1120,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30 Сормово. Если в пятницу вечером или субботу, то поадресу СП Буревестник, Ясная 341",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "20.02.2026 08:59",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "20.02.2026 09:25",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "20.02.2026 19:03",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "20.02.2026 08:59",
+      "has_exact_price": true,
+      "status_updated_at": "20.02.2026 19:03"
+    },
+    "4f5355e3": {
+      "id": "4f5355e3",
+      "user_id": "5742620655",
+      "username": null,
+      "items": [
+        {
+          "id": "8fc0f0c8",
+          "name": "🌭 Колбаса",
+          "quantity": 1,
+          "price": 1100,
+          "price_per_kg": true,
+          "average_weight": 0,
+          "exact_price": false
+        },
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 1425.0,
+      "delivery_method": "delivery",
+      "address": "Космическая, 52,109",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "20.02.2026 15:21",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "20.02.2026 15:59",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "20.02.2026 18:11",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "20.02.2026 15:21",
+      "has_exact_price": false,
+      "status_updated_at": "20.02.2026 18:11"
+    },
+    "f778be27": {
+      "id": "f778be27",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "8fc0f0c8",
+          "name": "🌭 Колбаса",
+          "quantity": 1,
+          "price": 1100,
+          "price_per_kg": true,
+          "average_weight": 0,
+          "exact_price": false
+        }
+      ],
+      "total": 300,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30. Пятница вечер и суббота СП Буревестник, ул. Ясная 341",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "20.02.2026 16:03",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "20.02.2026 16:06",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "20.02.2026 19:03",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "20.02.2026 16:03",
+      "has_exact_price": false,
+      "status_updated_at": "20.02.2026 19:03"
+    },
+    "44e36d3d": {
+      "id": "44e36d3d",
+      "user_id": "669937903",
+      "username": "stonqwe",
+      "items": [
+        {
+          "id": "8fc0f0c8",
+          "name": "🌭 Колбаса",
+          "quantity": 1,
+          "price": 1100,
+          "price_per_kg": true,
+          "average_weight": 0,
+          "exact_price": false
+        }
+      ],
+      "total": 0,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "20.02.2026 16:34",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "20.02.2026 16:34",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "20.02.2026 19:55",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "20.02.2026 16:34",
+      "has_exact_price": false,
+      "status_updated_at": "20.02.2026 19:55"
+    },
+    "52503054": {
+      "id": "52503054",
+      "user_id": "669937903",
+      "username": "stonqwe",
+      "items": [
+        {
+          "id": "8fc0f0c8",
+          "name": "🌭 Колбаса",
+          "quantity": 1,
+          "price": 1100,
+          "price_per_kg": true,
+          "average_weight": 0,
+          "exact_price": false
+        }
+      ],
+      "total": 0,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "20.02.2026 16:43",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "20.02.2026 16:44",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "20.02.2026 19:55",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "20.02.2026 16:43",
+      "has_exact_price": false,
+      "status_updated_at": "20.02.2026 19:55"
+    },
+    "48af7ac3": {
+      "id": "48af7ac3",
+      "user_id": "1951626760",
+      "username": "Kazachenkoi",
+      "items": [
+        {
+          "id": "a38ae031",
+          "name": "🐔 Куриное",
+          "quantity": 4,
+          "price": 15,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 600,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "26.02.2026 08:46",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "26.02.2026 09:13",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "02.03.2026 16:08",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "26.02.2026 08:46",
+      "has_exact_price": true,
+      "status_updated_at": "02.03.2026 16:08"
+    },
+    "9642031f": {
+      "id": "9642031f",
+      "user_id": "7885683033",
+      "username": "Boligar1",
+      "items": [
+        {
+          "id": "a38ae031",
+          "name": "🐔 Куриное",
+          "quantity": 2,
+          "price": 15,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 1425.0,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "26.02.2026 13:50",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "26.02.2026 13:50",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "27.02.2026 21:19",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "26.02.2026 13:50",
+      "has_exact_price": false,
+      "status_updated_at": "27.02.2026 21:19"
+    },
+    "778ffe0c": {
+      "id": "778ffe0c",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "a38ae031",
+          "name": "🐔 Куриное",
+          "quantity": 2,
+          "price": 15,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "b0b75c26",
+          "name": "🐔 Молодой петушок",
+          "quantity": 1,
+          "price": 550,
+          "price_per_kg": true,
+          "average_weight": 1,
+          "exact_price": false
+        },
+        {
+          "id": "3106f9cf",
+          "name": "🐓 Цыпленок бройлер",
+          "quantity": 1,
+          "price": 450,
+          "price_per_kg": true,
+          "average_weight": 2.5,
+          "exact_price": false
+        }
+      ],
+      "total": 2275.0,
+      "delivery_method": "delivery",
+      "address": "СП Буревестник Ясная 341. Пятница вечер и суббота по данному адресу",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "27.02.2026 14:28",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "27.02.2026 14:34",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "27.02.2026 16:14",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "28.02.2026 20:24",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "27.02.2026 14:28",
+      "has_exact_price": false,
+      "status_updated_at": "28.02.2026 20:24"
+    },
+    "ef1081ee": {
+      "id": "ef1081ee",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 620,
+      "delivery_method": "delivery",
+      "address": "СП Буревестник, Ясная 341 плюсом к заказу",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "27.02.2026 16:07",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "27.02.2026 16:14",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "28.02.2026 20:24",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "27.02.2026 16:07",
+      "has_exact_price": true,
+      "status_updated_at": "28.02.2026 20:24"
+    },
+    "d7aceba7": {
+      "id": "d7aceba7",
+      "user_id": "5742620655",
+      "username": null,
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 620,
+      "delivery_method": "delivery",
+      "address": "Ул. Космическая, 52-109",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "27.02.2026 16:39",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "27.02.2026 17:34",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "28.02.2026 13:31",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "27.02.2026 16:39",
+      "has_exact_price": true,
+      "status_updated_at": "28.02.2026 13:31"
+    },
+    "bb451ed8": {
+      "id": "bb451ed8",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "8fc0f0c8",
+          "name": "🌭 Колбаса",
+          "quantity": 5,
+          "price": 1100,
+          "price_per_kg": true,
+          "average_weight": 0,
+          "exact_price": false
+        }
+      ],
+      "total": 300,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30. В дневное время Энгельса 5а, детский сад 360",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "02.03.2026 11:42",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "02.03.2026 11:44",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "02.03.2026 19:30",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "02.03.2026 11:42",
+      "has_exact_price": false,
+      "status_updated_at": "02.03.2026 19:30"
+    },
+    "57782b9a": {
+      "id": "57782b9a",
+      "user_id": "1782557354",
+      "username": null,
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 620,
+      "delivery_method": "delivery",
+      "address": "Большевистская 6-30",
+      "status": "✅ Выполнен",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "02.03.2026 11:43",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "02.03.2026 11:44",
+          "changed_by": "admin_439446887"
+        },
+        {
+          "status": "✅ Выполнен",
+          "timestamp": "02.03.2026 19:30",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "02.03.2026 11:43",
+      "has_exact_price": true,
+      "status_updated_at": "02.03.2026 19:30"
+    },
+    "a54ec321": {
+      "id": "a54ec321",
+      "user_id": "963493744",
+      "username": "irina_akif",
+      "items": [
+        {
+          "id": "5f29cdc2",
+          "name": "🐦 Перепелиное",
+          "quantity": 2,
+          "price": 8,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        },
+        {
+          "id": "a38ae031",
+          "name": "🐔 Куриное",
+          "quantity": 2,
+          "price": 15,
+          "price_per_kg": false,
+          "average_weight": 0,
+          "exact_price": true
+        }
+      ],
+      "total": 620,
+      "delivery_method": "pickup",
+      "address": "Нижний Новгород ул. Профинтерна д.26",
+      "status": "✅ Подтвержден",
+      "status_history": [
+        {
+          "status": "🆕 Новый",
+          "timestamp": "07.03.2026 10:22",
+          "changed_by": "system"
+        },
+        {
+          "status": "✅ Подтвержден",
+          "timestamp": "07.03.2026 11:57",
+          "changed_by": "admin_439446887"
+        }
+      ],
+      "created_at": "07.03.2026 10:22",
+      "has_exact_price": true,
+      "status_updated_at": "07.03.2026 11:57"
+    }
+  },
+  "carts": {
+    "1884160873": [],
+    "1009265622": [],
+    "1782557354": [],
+    "5371873461": [
+      {
+        "id": "5f29cdc2",
+        "name": "🐦 Перепелиное",
+        "quantity": 2
+      },
+      {
+        "id": "3106f9cf",
+        "name": "🐓 Цыпленок бройлер",
+        "quantity": 1
+      },
+      {
+        "id": "45381ff4",
+        "name": "🐦 Перепелка",
+        "quantity": 5
+      }
+    ],
+    "963493744": [],
+    "1499578924": [],
+    "964179074": [
+      {
+        "id": "3106f9cf",
+        "name": "🐓 Цыпленок бройлер",
+        "quantity": 1
+      }
+    ],
+    "518066846": [
+      {
+        "id": "5f29cdc2",
+        "name": "🐦 Перепелиное",
+        "quantity": 2
+      }
+    ],
+    "6510084259": [
+      {
+        "id": "45381ff4",
+        "name": "🐦 Перепелка",
+        "quantity": 5
+      }
+    ],
+    "5093301023": [
+      {
+        "id": "5f29cdc2",
+        "name": "🐦 Перепелиное",
+        "quantity": 1
+      }
+    ],
+    "5742620655": [],
+    "1790910476": [],
+    "669937903": [],
+    "1951626760": [],
+    "7885683033": [],
+    "605601934": [
+      {
+        "id": "3106f9cf",
+        "name": "🐓 Цыпленок бройлер",
+        "quantity": 1
+      }
+    ],
+    "1250234373": [
+      {
+        "id": "3106f9cf",
+        "name": "🐓 Цыпленок бройлер",
+        "quantity": 2
+      }
+    ],
+    "812882651": [
+      {
+        "id": "9dd1def7",
+        "name": "👑 Цесарка",
+        "quantity": 1
+      }
+    ]
+  },
+  "notifications": {
+    "a38ae031": [
+      "1782557354"
+    ],
+    "5f29cdc2": [
+      "1782557354"
+    ],
+    "acfa237d": [
+      "1782557354"
+    ],
+    "8fc0f0c8": [
+      "1790910476"
+    ],
+    "45381ff4": [
+      "1782557354"
+    ]
+  },
+  "product_views": {
+    "2026-02-15": {
+      "a38ae031": 18,
+      "acfa237d": 9,
+      "5f29cdc2": 15,
+      "9dd1def7": 8,
+      "3106f9cf": 18,
+      "b0b75c26": 4,
+      "45381ff4": 8
+    },
+    "2026-02-16": {
+      "3106f9cf": 9,
+      "a38ae031": 6,
+      "5f29cdc2": 5,
+      "acfa237d": 3,
+      "45381ff4": 6,
+      "9dd1def7": 4,
+      "b0b75c26": 3
+    },
+    "2026-02-17": {
+      "5f29cdc2": 5,
+      "a38ae031": 4,
+      "9dd1def7": 3,
+      "acfa237d": 2,
+      "b0b75c26": 2,
+      "3106f9cf": 3,
+      "45381ff4": 5
+    },
+    "2026-02-18": {
+      "3106f9cf": 2,
+      "a38ae031": 2,
+      "5f29cdc2": 2,
+      "acfa237d": 1,
+      "45381ff4": 2,
+      "9dd1def7": 2,
+      "b0b75c26": 1
+    },
+    "2026-02-19": {
+      "45381ff4": 1
+    },
+    "2026-02-20": {
+      "5f29cdc2": 6,
+      "a38ae031": 5,
+      "acfa237d": 5,
+      "45381ff4": 4,
+      "9dd1def7": 5,
+      "b0b75c26": 3,
+      "3106f9cf": 7,
+      "8fc0f0c8": 10
+    },
+    "2026-02-21": {
+      "a38ae031": 3,
+      "5f29cdc2": 3,
+      "3106f9cf": 3,
+      "9dd1def7": 4,
+      "8fc0f0c8": 1,
+      "acfa237d": 1,
+      "b0b75c26": 2,
+      "45381ff4": 2
+    },
+    "2026-02-22": {
+      "8fc0f0c8": 1,
+      "3106f9cf": 1,
+      "45381ff4": 1,
+      "9dd1def7": 1,
+      "a38ae031": 1,
+      "5f29cdc2": 1
+    },
+    "2026-02-25": {
+      "3106f9cf": 1
+    },
+    "2026-02-26": {
+      "a38ae031": 6,
+      "3106f9cf": 3,
+      "8fc0f0c8": 3,
+      "5f29cdc2": 1,
+      "acfa237d": 1,
+      "9dd1def7": 2,
+      "b0b75c26": 1,
+      "45381ff4": 1
+    },
+    "2026-02-27": {
+      "8fc0f0c8": 7,
+      "3106f9cf": 9,
+      "b0b75c26": 6,
+      "9dd1def7": 5,
+      "45381ff4": 4,
+      "a38ae031": 6,
+      "acfa237d": 2,
+      "5f29cdc2": 4
+    },
+    "2026-02-28": {
+      "acfa237d": 1,
+      "5f29cdc2": 3,
+      "a38ae031": 2,
+      "45381ff4": 2,
+      "9dd1def7": 3,
+      "b0b75c26": 3,
+      "8fc0f0c8": 3,
+      "3106f9cf": 2
+    },
+    "2026-03-01": {
+      "8fc0f0c8": 4,
+      "3106f9cf": 5,
+      "45381ff4": 2,
+      "a38ae031": 1,
+      "b0b75c26": 2,
+      "9dd1def7": 1
+    },
+    "2026-03-02": {
+      "8fc0f0c8": 8,
+      "5f29cdc2": 1,
+      "45381ff4": 4,
+      "b0b75c26": 2,
+      "3106f9cf": 2,
+      "9dd1def7": 1
+    },
+    "2026-03-03": {
+      "a38ae031": 3,
+      "8fc0f0c8": 6,
+      "3106f9cf": 4,
+      "b0b75c26": 5,
+      "9dd1def7": 5,
+      "45381ff4": 4,
+      "5f29cdc2": 2,
+      "acfa237d": 2
+    },
+    "2026-03-04": {
+      "3106f9cf": 1,
+      "b0b75c26": 1,
+      "9dd1def7": 1,
+      "45381ff4": 1,
+      "8fc0f0c8": 1,
+      "a38ae031": 2,
+      "5f29cdc2": 2,
+      "acfa237d": 1
+    },
+    "2026-03-06": {
+      "9dd1def7": 1,
+      "8fc0f0c8": 1
+    },
+    "2026-03-07": {
+      "9dd1def7": 4,
+      "3106f9cf": 7,
+      "5f29cdc2": 7,
+      "a38ae031": 6,
+      "45381ff4": 6,
+      "8fc0f0c8": 8,
+      "acfa237d": 4,
+      "b0b75c26": 2
+    }
+  },
+  "order_return_items": {},
+  "manual_add_requests": {
+    "2026-02-15": {
+      "b0b75c26": 1,
+      "3106f9cf": 3,
+      "acfa237d": 1,
+      "45381ff4": 2,
+      "5f29cdc2": 1
+    },
+    "2026-02-16": {
+      "3106f9cf": 1,
+      "45381ff4": 2
+    },
+    "2026-02-17": {
+      "45381ff4": 1
+    },
+    "2026-02-19": {
+      "9dd1def7": 1
+    },
+    "2026-02-20": {
+      "5f29cdc2": 1,
+      "3106f9cf": 3,
+      "acfa237d": 1
+    },
+    "2026-02-26": {
+      "a38ae031": 1
+    },
+    "2026-02-27": {
+      "a38ae031": 1
+    },
+    "2026-03-02": {
+      "8fc0f0c8": 2
+    },
+    "2026-03-07": {
+      "3106f9cf": 1,
+      "9dd1def7": 1
+    }
+  },
+  "user_stats": {
+    "1884160873": {
+      "total_orders": 0,
+      "completed_orders": 2,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 1270.0,
+      "last_order_date": "15.02.2026 10:20",
+      "first_order_date": "15.02.2026 10:11",
+      "username": "boligariv",
+      "last_status_change": "15.02.2026 10:20"
+    },
+    "963493744": {
+      "total_orders": 0,
+      "completed_orders": 1,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 1845.0,
+      "last_order_date": "07.03.2026 10:22",
+      "first_order_date": "15.02.2026 12:38",
+      "username": "irina_akif",
+      "last_status_change": "15.02.2026 17:39"
+    },
+    "1499578924": {
+      "total_orders": 0,
+      "completed_orders": 1,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 3150.0,
+      "last_order_date": "15.02.2026 18:58",
+      "first_order_date": "15.02.2026 12:47",
+      "username": null,
+      "last_status_change": "15.02.2026 18:58"
+    },
+    "1009265622": {
+      "total_orders": 0,
+      "completed_orders": 2,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 2850.0,
+      "last_order_date": "15.02.2026 17:40",
+      "first_order_date": "15.02.2026 13:04",
+      "username": "Mariy081320",
+      "last_status_change": "15.02.2026 17:40"
+    },
+    "1782557354": {
+      "total_orders": 0,
+      "completed_orders": 9,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 10800.0,
+      "last_order_date": "02.03.2026 19:30",
+      "first_order_date": "15.02.2026 17:22",
+      "username": null,
+      "last_status_change": "02.03.2026 19:30"
+    },
+    "5742620655": {
+      "total_orders": 0,
+      "completed_orders": 3,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 3470.0,
+      "last_order_date": "28.02.2026 13:31",
+      "first_order_date": "16.02.2026 07:30",
+      "username": null,
+      "last_status_change": "28.02.2026 13:31"
+    },
+    "1790910476": {
+      "total_orders": 0,
+      "completed_orders": 0,
+      "canceled_orders": 1,
+      "postponed_orders": 0,
+      "total_spent": 0,
+      "last_order_date": "26.02.2026 19:18",
+      "first_order_date": "20.02.2026 07:06",
+      "username": null,
+      "last_status_change": "26.02.2026 19:18"
+    },
+    "669937903": {
+      "total_orders": 0,
+      "completed_orders": 2,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 0,
+      "last_order_date": "20.02.2026 19:55",
+      "first_order_date": "20.02.2026 16:34",
+      "username": "stonqwe",
+      "last_status_change": "20.02.2026 19:55"
+    },
+    "1951626760": {
+      "total_orders": 0,
+      "completed_orders": 1,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 600,
+      "last_order_date": "02.03.2026 16:08",
+      "first_order_date": "26.02.2026 08:46",
+      "username": "Kazachenkoi",
+      "last_status_change": "02.03.2026 16:08"
+    },
+    "7885683033": {
+      "total_orders": 0,
+      "completed_orders": 1,
+      "canceled_orders": 0,
+      "postponed_orders": 0,
+      "total_spent": 1425.0,
+      "last_order_date": "27.02.2026 21:19",
+      "first_order_date": "26.02.2026 13:50",
+      "username": "Boligar1",
+      "last_status_change": "27.02.2026 21:19"
+    }
+  }
+}
