@@ -1339,23 +1339,20 @@ async def show_products(message: types.Message):
         # Ищем ВСЕ товары, где название рубрики содержится в названии
         found_products = []
         
-        # Удаляем эмодзи из названия для поиска
+        # Удаляем эмодзи и счетчик из названия для поиска
         clean_rubric = rubric_text
-        for emoji in ['🐔', '🐦', '👑', '🥚', '🌭', '🥩', '🍗', '🐓']:
+        for emoji in ['🐔', '🐦', '👑', '🥚', '🌭', '🥩', '🍗', '🐓', '❤️', '🫔', '🦴']:
             clean_rubric = clean_rubric.replace(emoji, '').strip()
         
         for prod in products_db.values():
             prod_sub = prod.get('subcategory', '')
             # Также удаляем эмодзи из названия товара
             clean_prod_sub = prod_sub
-            for emoji in ['🐔', '🐦', '👑', '🥚', '🌭', '🥩', '🍗', '🐓']:
+            for emoji in ['🐔', '🐦', '👑', '🥚', '🌭', '🥩', '🍗', '🐓', '❤️', '🫔', '🦴']:
                 clean_prod_sub = clean_prod_sub.replace(emoji, '').strip()
             
-            # Проверяем совпадение (с эмодзи и без)
-            if (clean_rubric in clean_prod_sub or 
-                clean_prod_sub in clean_rubric or
-                rubric_text in prod_sub or
-                prod_sub in rubric_text):
+            # Проверяем совпадение БЕЗ эмодзи
+            if clean_rubric and clean_prod_sub and (clean_rubric in clean_prod_sub or clean_prod_sub in clean_rubric):
                 if prod.get('quantity', 0) > 0:
                     found_products.append(prod)
 
@@ -3965,7 +3962,7 @@ async def on_startup(dp):
             "🤖 <b>Бот семейной фермы Русский ТАЙ запущен!</b>\n\n"
             "🛡️ <b>Защита активирована:</b>\n"
             "• Токен в переменных окружениях\n"
-            "• ��ащита от флуда (1 сек/сообщение)\n"
+            "• ��а��ита от флуда (1 сек/сообщение)\n"
             "• Автоблокировка флудеров на 5 мин\n"
             "• Валидация всех данных\n"
             "��� Автоудаление заказов через 30 дней (152-ФЗ)\n"
