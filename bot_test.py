@@ -3871,10 +3871,11 @@ async def on_startup(dp):
                     orders_db[order['id']] = order_dict
                 print(f"[OK] Загружено заказов: {len(orders_db)}")
             
-            # Загружаем админов (объявляем global)
-            global admins_db
+            # Загружаем админов
             admins = db.get_all_admins()
-            admins_db = {admin['user_id'] for admin in admins}
+            admins_db.clear()
+            for admin in admins:
+                admins_db.add(admin['user_id'])
             print(f"[OK] Загружено админов: {len(admins_db)}")
                     
         except Exception as e:
