@@ -1342,6 +1342,15 @@ async def show_products(message: types.Message):
                 product = prod
                 break
         
+        # Если не нашли точное совпадение, ищем по частичному
+        if not product:
+            for prod in products_db.values():
+                prod_sub = prod.get('subcategory', '')
+                # Проверяем, содержится ли название кнопки в названии товара
+                if rubric_text in prod_sub or rubric_text.replace('🐔', '').replace('🐦', '').replace('👑', '').strip() in prod_sub:
+                    product = prod
+                    break
+        
         if not product:
             user_is_admin = is_admin(message.from_user.id)
             if user_is_admin:
