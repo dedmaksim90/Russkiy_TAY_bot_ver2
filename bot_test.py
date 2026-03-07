@@ -3839,12 +3839,31 @@ async def on_startup(dp):
         try:
             from migrate_from_old_bot import main as migrate_main
             migrate_main()
+            
+            # Небольшая задержка для записи данных в БД
+            import time
+            time.sleep(2)
+            
             # Перезагружаем данные после миграции
+            print("\n🔄 Перезагрузка данных после миграции...")
             load_data()
             print(f"[OK] После миграции загружено товаров: {len(products_db)}")
             print(f"[OK] После миграции загружено заказов: {len(orders_db)}")
+            
+            # Если все еще 0 - пробуем прямой запрос
+            if len(products_db) == 0:
+                from database import get_all_products
+                products = get_all_products()
+                print(f"Прямой запрос в БД: товаров {len(products)}")
+                if products:
+                    for p in products:
+                        products_db[p['id']] = dict(p)
+                    print(f"[OK] Загружено товаров напрямую: {len(products_db)}")
+                    
         except Exception as e:
             print(f"⚠️ Ошибка миграции: {e}")
+            import traceback
+            print(traceback.format_exc())
     # =====================================
 
     # ===== ПРИНУДИТЕЛЬНЫЙ СБРОС ВЕБХУКА =====
