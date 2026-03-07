@@ -3842,26 +3842,42 @@ async def on_startup(dp):
             
             # Небольшая задержка для записи данных в БД
             import time
-            time.sleep(2)
+            time.sleep(3)
             
-            # Перезагружаем данные после миграции
-            print("\n🔄 Перезагрузка данных после миграции...")
-            load_data()
-            print(f"[OK] После миграции загружено товаров: {len(products_db)}")
-            print(f"[OK] После миграции загружено заказов: {len(orders_db)}")
+            # Прямой запрос к БД для загрузки товаров
+            print("\n🔄 Прямая загрузка товаров из БД...")
+            from database import get_all_products, get_db_connection
             
-            # Если все еще 0 - пробуем прямой запрос
-            if len(products_db) == 0:
-                from database import get_all_products
-                products = get_all_products()
-                print(f"Прямой запрос в БД: товаров {len(products)}")
-                if products:
-                    for p in products:
-                        products_db[p['id']] = dict(p)
-                    print(f"[OK] Загружено товаров напрямую: {len(products_db)}")
+            # Загружаем товары напрямую
+            products = get_all_products()
+            print(f"Найдено товаров в БД: {len(products)}")
+            
+            if products:
+                products_db.clear()
+                for p in products:
+                    products_db[p['id']] = dict(p)
+                print(f"[OK] Загружено товаров: {len(products_db)}")
+            
+            # Загружаем заказы напрямую
+            with get_db_connection() as conn:
+                cursor = conn.execute("SELECT * FROM orders")
+                orders = cursor.fetchall()
+                orders_db.clear()
+                for order in orders:
+                    order_dict = dict(order)
+                    order_dict['items'] = [
+                        dict(item) for item in db.get_order_items(order['id'])
+                    ]
+                    orders_db[order['id']] = order_dict
+                print(f"[OK] Загружено заказов: {len(orders_db)}")
+            
+            # Загружаем админов
+            admins = db.get_all_admins()
+            admins_db = {admin['user_id'] for admin in admins}
+            print(f"[OK] Загружено админов: {len(admins_db)}")
                     
         except Exception as e:
-            print(f"⚠️ Ошибка миграции: {e}")
+            print(f"⚠️ Ошибка загрузки после миграции: {e}")
             import traceback
             print(traceback.format_exc())
     # =====================================
