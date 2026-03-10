@@ -6,7 +6,7 @@
       "subcategory": "🐔 Куриное",
       "subcategory_type": "🐔 Куриное",
       "price": 15,
-      "quantity": 0,
+      "quantity": 10,
       "photo": "AgACAgIAAxkBAAIL_GmRm54OaLGAQFoojDV-V2zqE6JVAAL8E2sb5EaJSA0YysoqgS8ZAQADAgADeQADOgQ",
       "published": false,
       "created_at": "15.02.2026 10:10"
@@ -17,7 +17,7 @@
       "subcategory": "🐦 Перепелиное",
       "subcategory_type": "🐦 Перепелиное",
       "price": 8,
-      "quantity": 0,
+      "quantity": 10,
       "photo": "AgACAgIAAxkBAAIMHmmRnJy7rK0jhNjd5_bznV3oY1ksAALLFGsb5EaJSJ4DB73L53hJAQADAgADeQADOgQ",
       "published": false,
       "created_at": "15.02.2026 10:14"
@@ -28,7 +28,7 @@
       "subcategory": "👑 Цесариное",
       "subcategory_type": "👑 Цесариное",
       "price": 20,
-      "quantity": 0,
+      "quantity": 10,
       "photo": "AgACAgIAAxkBAAIMM2mRnNTjPiEIo8dHDDOFIaezULRiAALRFGsb5EaJSK-1uOww6L1QAQADAgADeQADOgQ",
       "published": false,
       "created_at": "15.02.2026 10:15"
@@ -72,7 +72,7 @@
       "subcategory": "🐦 Перепелка",
       "subcategory_type": "❄️ Охлажденное",
       "price": 750,
-      "quantity": 0,
+      "quantity": 10,
       "photo": "AgACAgIAAxkBAAIMTGmRnPkgdwAB5cVULaDW6vbDAaROnAAC0xRrG-RGiUgPlTAgQUsFzQEAAwIAA3kAAzoE",
       "published": false,
       "created_at": "15.02.2026 10:18"
@@ -83,7 +83,7 @@
       "subcategory": "🌭 Колбаса",
       "subcategory_type": "🌭 Колбаса",
       "price": 1100,
-      "quantity": 0,
+      "quantity": 10,
       "photo": "AgACAgIAAxkBAAISq2mYcHi23mAUM0Op_mzS7gb7C8-ZAAI9FGsbIVLJSFZh17Ms0KTyAQADAgADeQADOgQ",
       "published": false,
       "created_at": "20.02.2026 14:32"
