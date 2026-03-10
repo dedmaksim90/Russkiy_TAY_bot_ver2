@@ -285,68 +285,48 @@ user_stats_db = {}  # Кэш статистики пользователей
 reviews_db = {}  # Кэш отзывов
 
 # ==================== ФУНКЦИИ ДЛЯ СОХРАНЕНИЯ ДАННЫХ ====================
-DATA_FILE = 'shop_data.json'  # Оставлен для обратной совместимости
+DATA_FILE = 'shop_data.json'  # Основной файл данных (JSON)
 
 def save_data():
-    """Сохранение данных в JSON файл (для обратной совместимости)"""
-    # Данные теперь хранятся в SQLite, но можно сделать бэкап в JSON
+    """Сохранение данных в JSON файл"""
     try:
-        db.export_to_json(DATA_FILE)
+        data = {
+            'products': products_db,
+            'individual_products': individual_products_db,
+            'orders': orders_db,
+            'reviews': reviews_db,
+            'admins': list(admins_db)
+        }
+        with open(DATA_FILE, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logging.info(f"💾 Данные сохранены в JSON ({len(products_db)} товаров)")
     except Exception as e:
-        logging.error(f"❌ Ошибка сохранения бэкапа: {e}")
+        logging.error(f"❌ Ошибка сохранения: {e}")
 
 def load_data():
-    """Загрузка данных из SQLite"""
+    """Загрузка данных из JSON файла"""
     global products_db, individual_products_db, orders_db, reviews_db, admins_db
 
     try:
-        # Загружаем товары
-        products = db.get_all_products()
-        products_db = {}
-        for p in products:
-            products_db[p['id']] = dict(p)
-        logging.info(f"Загружено товаров из БД: {len(products_db)}")
+        if not os.path.exists(DATA_FILE):
+            logging.warning(f"⚠️ Файл {DATA_FILE} не найден!")
+            return
 
-        # Загружаем индивидуальные товары
-        from database import get_db_connection
-        with get_db_connection() as conn:
-            cursor = conn.execute("SELECT * FROM individual_products")
-            individual_products_db = {row['id']: dict(row) for row in cursor.fetchall()}
-        logging.info(f"Загружено индивидуальных товаров: {len(individual_products_db)}")
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
 
-        # Загружаем заказы
-        with get_db_connection() as conn:
-            cursor = conn.execute("SELECT * FROM orders")
-            orders_db = {row['id']: dict(row) for row in cursor.fetchall()}
-            # Загружаем элементы заказов
-            for order_id in orders_db:
-                orders_db[order_id]['items'] = [
-                    dict(item) for item in db.get_order_items(order_id)
-                ]
-        logging.info(f"Загружено заказов: {len(orders_db)}")
+        products_db = data.get('products', {})
+        individual_products_db = data.get('individual_products', {})
+        orders_db = data.get('orders', {})
+        reviews_db = data.get('reviews', {})
+        admins_db = set(data.get('admins', []))
 
-        # Загружаем отзывы
-        with get_db_connection() as conn:
-            cursor = conn.execute("SELECT * FROM reviews")
-            reviews_db = {}
-            for row in cursor.fetchall():
-                pid = row['product_id']
-                if pid not in reviews_db:
-                    reviews_db[pid] = []
-                reviews_db[pid].append(dict(row))
-        logging.info(f"Загружено отзывов: {len(reviews_db)}")
-
-        # Загружаем админов
-        admins = db.get_all_admins()
-        admins_db = {admin['user_id'] for admin in admins}
-        logging.info(f"Загружено админов: {len(admins_db)}")
-
-        logging.info(f"📂 Данные загружены из SQLite")
+        logging.info(f"📂 Данные загружены из JSON")
         logging.info(f"   • Товаров: {len(products_db)}")
         logging.info(f"   • Заказов: {len(orders_db)}")
         logging.info(f"   • Администраторов: {len(admins_db)}")
     except Exception as e:
-        logging.error(f"❌ Ошибка загрузки из SQLite: {e}")
+        logging.error(f"❌ Ошибка загрузки из JSON: {e}")
         import traceback
         logging.error(traceback.format_exc())
 
@@ -3829,78 +3809,12 @@ async def on_startup(dp):
     print("БОТ СЕМЕЙНОЙ ФЕРМЫ РУССКИЙ ТАЙ")
     print("=" * 50)
 
-    # ===== ПРОВЕРКА БАЗЫ ДАННЫХ =====
-    print("\n📂 Проверка базы данных SQLite...")
-    
-    # Проверяем, есть ли уже база
-    import os
-    db_exists = os.path.exists(db.DB_PATH)
-    
-    if db_exists:
-        print("База данных найдена")
-        # Не вызываем init_database() чтобы не перезаписать существующую!
-    else:
-        print("База данных не найдена, создаем новую...")
-        db.init_database()
-        print("[OK] База данных создана")
-    
-    # ===== ЗАГРУЗКА ДАННЫХ ИЗ SQLite =====
-    print("\n📂 Загрузка данных...")
+    # ===== ЗАГРУЗКА ДАННЫХ ИЗ JSON =====
+    print("\n📂 Загрузка данных из JSON...")
     load_data()
-    print(f"[OK] Загружено товаров: {len(products_db)}")
-    print(f"[OK] Загружено заказов: {len(orders_db)}")
-    print(f"[OK] Администраторов: {len(admins_db)}")
-    
-    # Если база пустая, но есть shop_data.json - запустить миграцию
-    if len(products_db) == 0 and os.path.exists('shop_data.json'):
-        print("\n⚠️ База пустая, но найден shop_data.json! Запускаю миграцию...")
-        try:
-            from migrate_from_old_bot import main as migrate_main
-            migrate_main()
-            
-            # Небольшая задержка для записи данных в БД
-            import time
-            time.sleep(3)
-            
-            # Прямой запрос к БД для загрузки товаров
-            print("\n🔄 Прямая загрузка товаров из БД...")
-            from database import get_all_products, get_db_connection
-            
-            # Загружаем товары напрямую
-            products = get_all_products()
-            print(f"Найдено товаров в БД: {len(products)}")
-            
-            if products:
-                products_db.clear()
-                for p in products:
-                    products_db[p['id']] = dict(p)
-                print(f"[OK] Загружено товаров: {len(products_db)}")
-            
-            # Загружаем заказы напрямую
-            with get_db_connection() as conn:
-                cursor = conn.execute("SELECT * FROM orders")
-                orders = cursor.fetchall()
-                orders_db.clear()
-                for order in orders:
-                    order_dict = dict(order)
-                    order_dict['items'] = [
-                        dict(item) for item in db.get_order_items(order['id'])
-                    ]
-                    orders_db[order['id']] = order_dict
-                print(f"[OK] Загружено заказов: {len(orders_db)}")
-            
-            # Загружаем админов
-            admins = db.get_all_admins()
-            admins_db.clear()
-            for admin in admins:
-                admins_db.add(admin['user_id'])
-            print(f"[OK] Загружено админов: {len(admins_db)}")
-                    
-        except Exception as e:
-            print(f"⚠️ Ошибка загрузки после миграции: {e}")
-            import traceback
-            print(traceback.format_exc())
-    # =====================================
+    print(f"✅ Загружено товаров: {len(products_db)}")
+    print(f"✅ Загружено заказов: {len(orders_db)}")
+    print(f"✅ Администраторов: {len(admins_db)}")
 
     # ===== ПРИНУДИТЕЛЬНЫЙ СБРОС ВЕБХУКА =====
     print("\n🔄 Сбрасываем вебхук и очищаем обновления...")

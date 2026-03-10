@@ -30,7 +30,6 @@ wheels/
 *.sqlite3
 
 # Резервные копии данных
-shop_data.json
 *_backup.json
 
 # Логи
