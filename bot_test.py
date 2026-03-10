@@ -310,6 +310,22 @@ def load_data():
     try:
         if not os.path.exists(DATA_FILE):
             logging.warning(f"⚠️ Файл {DATA_FILE} не найден!")
+            products_db = {}
+            individual_products_db = {}
+            orders_db = {}
+            reviews_db = {}
+            admins_db = set()
+            return
+
+        # Проверяем, не пустой ли файл
+        file_size = os.path.getsize(DATA_FILE)
+        if file_size == 0:
+            logging.error(f"❌ Файл {DATA_FILE} пустой!")
+            products_db = {}
+            individual_products_db = {}
+            orders_db = {}
+            reviews_db = {}
+            admins_db = set()
             return
 
         with open(DATA_FILE, 'r', encoding='utf-8') as f:
@@ -329,6 +345,12 @@ def load_data():
         logging.error(f"❌ Ошибка загрузки из JSON: {e}")
         import traceback
         logging.error(traceback.format_exc())
+        # Инициализируем пустые данные
+        products_db = {}
+        individual_products_db = {}
+        orders_db = {}
+        reviews_db = {}
+        admins_db = set()
 
 def update_product(product_id: str, update_data: dict):
     """Обновить товар"""
@@ -1313,6 +1335,8 @@ async def go_back_from_rubric(message: types.Message):
                           any(rubric in m.text for rubric in ["🐓 Цыпленок бройлер", "🐔 Молодой петуш��к", "👑 Цесарка", "🐦 Перепелка", "🐔 Куриное", "🐦 Перепелиное", "👑 Цесариное", "🌭 Колбаса", "🥩 Тушенка"]))
 async def show_products(message: types.Message):
     try:
+        user_is_admin = is_admin(message.from_user.id)
+        
         # Извлекаем имя рубрики (убираем счетчик в скобках)
         rubric_text = message.text.split(' (')[0]
         
@@ -1337,7 +1361,6 @@ async def show_products(message: types.Message):
                     found_products.append(prod)
 
         if not found_products:
-            user_is_admin = is_admin(message.from_user.id)
             if user_is_admin:
                 await message.answer(
                     f"📭 В рубрике '{rubric_text}' пока нет товаров.\n\n"
